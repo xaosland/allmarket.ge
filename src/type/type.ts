@@ -1,28 +1,28 @@
-export type SubCategorie = {
-  id: number;
-  title: string;
-  url: string;
-  Photourl: any;
-  InnerBannerPhotourl: any;
-  InnerBannerurl: string;
-  showOnHomepage: boolean;
-  shortDescription: string;
-  orderIndex: number;
-  disablePurchase: boolean;
-  seoDescriptionKa?: any;
-  seoDescriptionLat?: any;
-  Categoryid: number;
-  HomepageImageurl: any;
+export type RootInterface = {
+  Id: number
+  PhotoUrl: string
+  SubCategories: SubCategory[]
+  Title: string
+  Url: string
 }
 
-export type List = {
-  id: number;
-  title: string;
-  url: string;
-  Photourl: string;
-  subCategories: SubCategorie[];
+export type SubCategory = {
+  CategoryId: number
+  DisablePurchase: boolean
+  HomepageImageUrl?: any
+  Id: number
+  InnerBannerPhotoUrl?: (null | string)[]
+  InnerBannerUrl?: (null | string)[]
+  OrderIndex: number
+  PhotoUrl?: (null | string)[]
+  SeoDescriptionKa?: any
+  SeoDescriptionLat?: any
+  ShortDescription?: (null | string)[]
+  ShowOnHomepage: boolean
+  Title: string
+  Url: string
 }
 
-export type type = {
-  list: List[];
+export type items = {
+  list: RootInterface[]
 }
