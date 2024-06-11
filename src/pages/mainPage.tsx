@@ -30,13 +30,6 @@ export const MainPage = () => {
                   <td>
                     <a href={subItem.Url}>{subItem.Title}</a>
                   </td>
-                  <td>
-                    {subItem.InnerBannerPhotoUrl ? (
-                      <img alt={item.Title} src={subItem.InnerBannerPhotoUrl} width={'50%'} />
-                    ) : (
-                      ''
-                    )}
-                  </td>
                 </tr>
               ))}
             </>
